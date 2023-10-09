@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CarXL</string>
+    <string name="about">CarX Launcher</string>
+    <string name="tb_permission_dialog_message">"%s требует разрешение Показывать поверх других окон для его запуска.  "</string>
+    <string name="tb_permission_dialog_instructions_phone">Телефон инструкция</string>
+    <string name="tb_permission_dialog_title">Необходимо разрешение</string>
+    <string name="tb_action_grant_permission">Давай</string>
+</resources>

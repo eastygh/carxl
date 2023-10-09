@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CarXL</string>
+    <string name="about">CarX Launcher</string>
+    <string name="tb_permission_dialog_message">%s requires permission to draw over other apps before it can start.\\n\\n</string>
+    <string name="tb_permission_dialog_instructions_phone">Phone instruct</string>
+    <string name="tb_permission_dialog_title">Permission request</string>
+    <string name="tb_action_grant_permission">Grant</string>
 </resources>

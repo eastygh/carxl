@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.easty.android.carxl"
+    >
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:clearTaskOnLaunch="true"
@@ -13,6 +17,7 @@
         android:stateNotNeeded="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.CarXL"
+        tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
