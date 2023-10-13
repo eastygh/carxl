@@ -1,12 +1,16 @@
 package ru.easty.android.carxl.util;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Rect;
 import android.net.Uri;
-import android.os.Build;
 import android.provider.Settings;
+import android.view.Window;
+
+import androidx.activity.ComponentActivity;
 
 import ru.easty.android.carxl.R;
 
@@ -49,7 +53,21 @@ public class U {
     }
 
     public static boolean canDrawOverlays(Context context) {
-        return Build.VERSION.SDK_INT < Build.VERSION_CODES.M || Settings.canDrawOverlays(context);
+        return Settings.canDrawOverlays(context);
+    }
+
+    public static ComponentActivity getLifecycleOwner(Context context) {
+        if (context instanceof ComponentActivity) {
+            return (ComponentActivity) context;
+        }
+        throw new IllegalStateException("Wrong activity type");
+    }
+
+    public static int determineTitleBarHeight(Activity activity) {
+        Window window = activity.getWindow();
+        Rect windowRect = new Rect();
+        window.getDecorView().getWindowVisibleDisplayFrame(windowRect);
+        return windowRect.top;
     }
 
 }
